@@ -122,6 +122,8 @@ dbString = dbString + '@' + settings.dbsettings.address;
 dbString = dbString + ':' + settings.dbsettings.port;
 dbString = dbString + '/' + settings.dbsettings.database;
 
+setTimeout(function(){ exit() }, 240000);
+
 is_locked(function (exists) {
   if (exists) {
     console.log("Script already running..");
